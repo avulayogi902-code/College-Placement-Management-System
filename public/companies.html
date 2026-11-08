@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies - College Placement Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Company Management</h1>
+    <p>Manage company details and recruitment information</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="students.html">Students</a>
+    <a href="companies.html">Companies</a>
+    <a href="drives.html">Placement Drives</a>
+    <a href="applications.html">Applications</a>
+</nav>
+
+<main class="container">
+    <h2>Company Details</h2>
+
+    <form id="companyForm">
+        <input type="hidden" id="company_id">
+
+        <label>Company Name</label>
+        <input type="text" id="company_name" placeholder="Enter company name" required>
+
+        <label>Industry</label>
+        <input type="text" id="industry" placeholder="Example: IT, Banking, Finance" required>
+
+        <label>Location</label>
+        <input type="text" id="location" placeholder="Enter company location">
+
+        <label>Website</label>
+        <input type="text" id="website" placeholder="Enter company website">
+
+        <button type="submit" id="companySubmitBtn">Save Company</button>
+        <button type="button" onclick="resetCompanyForm()" class="reset-btn">Clear</button>
+    </form>
+
+    <h2>Company List</h2>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Company Name</th>
+                    <th>Industry</th>
+                    <th>Location</th>
+                    <th>Website</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="companyTableBody"></tbody>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 College Placement Management System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications - College Placement Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Student Application Management</h1>
+    <p>Manage and track student placement applications</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="students.html">Students</a>
+    <a href="companies.html">Companies</a>
+    <a href="drives.html">Placement Drives</a>
+    <a href="applications.html">Applications</a>
+</nav>
+
+<main class="container">
+    <h2>Application Details</h2>
+
+    <form id="applicationForm">
+        <input type="hidden" id="application_id">
+
+        <label>Select Student</label>
+        <select id="student_id" required>
+            <option value="">Select Student</option>
+        </select>
+
+        <label>Select Placement Drive</label>
+        <select id="application_drive_id" required>
+            <option value="">Select Placement Drive</option>
+        </select>
+
+        <label>Application Date</label>
+        <input type="date" id="application_date" required>
+
+        <label>Application Status</label>
+        <select id="status" required>
+            <option value="">Select Status</option>
+            <option value="Applied">Applied</option>
+            <option value="Under Review">Under Review</option>
+            <option value="Shortlisted">Shortlisted</option>
+            <option value="Selected">Selected</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+
+        <button type="submit" id="applicationSubmitBtn">Save Application</button>
+        <button type="button" onclick="resetApplicationForm()" class="reset-btn">Clear</button>
+    </form>
+
+    <h2>Application List</h2>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student Name</th>
+                    <th>Company</th>
+                    <th>Job Role</th>
+                    <th>Application Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="applicationTableBody"></tbody>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 College Placement Management System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
